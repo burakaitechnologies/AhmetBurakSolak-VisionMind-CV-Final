@@ -139,8 +139,8 @@ ComputerVision-ITAI1378-Final/
 
 ```bash
 # clone
-git clone https://github.com/burakaitechnologies/Ahmet-Burak-Solak-AI-Portfolio.git
-cd Ahmet-Burak-Solak-AI-Portfolio/ComputerVision-ITAI1378-Final
+git clone https://github.com/burakaitechnologies/AhmetBurakSolak-VisionMind-CV-Final.git
+cd AhmetBurakSolak-VisionMind-CV-Final
 
 # (recommended) create a venv
 python -m venv .venv
