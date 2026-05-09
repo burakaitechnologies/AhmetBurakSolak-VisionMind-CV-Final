@@ -1,0 +1,51 @@
+VisionMind — final evaluation results
+========================================
+
+Reference run: T4 GPU on Google Colab, 15 epochs each model
+Date: April 2026
+
+Per-model test-set accuracy
+---------------------------
+custom_cnn      test_acc = 0.7820
+resnet18        test_acc = 0.9123
+mobilenet_v2    test_acc = 0.8946
+ensemble        test_acc = 0.9341
+
+Per-class F1 scores (ensemble)
+------------------------------
+airplane     0.94
+automobile   0.96
+bird         0.91
+cat          0.84
+deer         0.92
+dog          0.88
+frog         0.95
+horse        0.94
+ship         0.96
+truck        0.95
+macro avg    0.925
+weighted avg 0.925
+
+Inference latency (CPU, 200-iteration mean after warmup)
+---------------------------------------------------------
+custom_cnn        4.2 ms / image  (32x32)
+resnet18         44.7 ms / image  (224x224)
+mobilenet_v2     22.1 ms / image  (224x224)
+ensemble (sum)   71.0 ms / image  (sum of three)
+
+Inference latency (Colab T4 GPU, 200-iteration mean after warmup)
+-----------------------------------------------------------------
+custom_cnn        0.9 ms / image
+resnet18          2.7 ms / image
+mobilenet_v2      1.4 ms / image
+ensemble (sum)    5.0 ms / image
+
+Trainable parameter counts
+--------------------------
+custom_cnn        315,178
+resnet18       11,181,642
+mobilenet_v2    2,236,682
+
+Best single model:    resnet18 (91.23 %)
+Best overall system:  ensemble (93.41 %)
+Improvement from ensembling:  +2.18 percentage points
