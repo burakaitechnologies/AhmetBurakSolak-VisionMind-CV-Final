@@ -19,13 +19,20 @@ dist/
 # Data files (auto-downloaded, too large for git)
 data/cifar-10-*/
 data/cifar-10-*.tar.gz
+data/_cifar/
 data/raw/
 data/processed/
 
-# Trained model checkpoints (too large for git)
-models/*.pt
-models/*.pth
+# Trained model checkpoints (large; keep small demo checkpoint though)
+# models/*.pt
+# models/*.pth
 models/*.onnx
+models/best.pt
+models/*_best.pt
+# (quick_cnn.pt IS committed so the demo runs offline)
+
+# Demo regenerated outputs (recreated by demo.py each run)
+demo_outputs/
 
 # Temp + logs
 *.log
